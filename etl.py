@@ -6,6 +6,15 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+     """
+    This procedure processes a song file whose filepath has been provided as an arugment.
+    It extracts the song information in order to store it into the songs table.
+    Then it extracts the artist information in order to store it into the artists table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the song file
+    """
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -19,6 +28,17 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+     """
+    This procedure processes a log file whose filepath has been provided as an arugment.
+    It extracts and filter data where 'page' field having value 'NextSong' into pandas dataframe.
+    It extract time in hour/day etc. from  'ts' field and insert into the time table.
+    Then it extracts the user information and store it into the users table.
+    Then it takes song name, artist name and duration to get songid and artistid.
+    It executes the join table query to insert into songplay table, the fact table.
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the song file
+    """
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -65,6 +85,13 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    """
+    Driver function to load data from songs and event log files into Postgres database.
+    :param cur: a database cursor reference
+    :param conn: database connection reference
+    :param filepath: parent directory where the files exists
+    :param func: function to call
+    """
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
@@ -84,6 +111,9 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
+    """
+    Driver function for loading songs and log data into Postgres database
+    """
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
 

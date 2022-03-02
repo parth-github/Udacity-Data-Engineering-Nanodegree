@@ -70,6 +70,9 @@ artist_id, name, location, latitude, longitude
 start_time, hour, day, week, month, year, weekday
 ```
 
+### ER Diagram
+![ER Diagram](sparkifydb_erd.png)
+
 ## Project Files
 
 ```sql_queries.py``` -> contains sql queries for dropping and  creating fact and dimension tables. Also, contains insertion query template.
@@ -87,7 +90,7 @@ start_time, hour, day, week, month, year, weekday
 
 ```create_erd.py``` -> to create ER Diagram of sparkify db from postgresql db
 
-```sparkifydb_erd.png`` -> ER Diagram generated from create_erd.py program
+```sparkifydb_erd.png``` -> ER Diagram generated from create_erd.py program
 
 ## Environment 
 Python 3.7 or above

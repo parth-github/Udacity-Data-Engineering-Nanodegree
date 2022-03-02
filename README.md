@@ -1,7 +1,7 @@
 # Udacity-Data-Engineering-Nanodegree
 Udacity Data Engineering Nanodegree
 
-|Sl.No.  |Project Title |
-|--------|--------------|
-|1 |Data Modelling with Postgresql|
+|Sl.No.  |Project Title |Project README|
+|--------|--------------|---------------|
+|1 |Data Modelling with Postgresql|[README](Project1-DataModelling-with-Postgres/README.md)|
 |2  |Data Modelling with Cassndra|

@@ -4,4 +4,4 @@ Udacity Data Engineering Nanodegree
 |Sl.No.  |Project Title |
 |--------|--------------|
 |1 |Data Modelling with Postgresql|
-|--------|---------------|
+|2  |Data Modelling with Cassndra|

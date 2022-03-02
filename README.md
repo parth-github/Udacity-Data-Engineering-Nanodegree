@@ -65,6 +65,9 @@ artist_id, name, location, latitude, longitude
 start_time, hour, day, week, month, year, weekday
 ```
 
+### ER Diagram
+![ER Diagram] (sparkifydb_erd.png)
+
 ## Project Files
 
 ```sql_queries.py``` -> contains sql queries for dropping and  creating fact and dimension tables. Also, contains insertion query template.

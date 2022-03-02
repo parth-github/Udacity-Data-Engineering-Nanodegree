@@ -82,7 +82,7 @@ start_time, hour, day, week, month, year, weekday
 
 ```create_erd.py``` -> to create ER Diagram of sparkify db from postgresql db
 
-```sparkifydb_erd.png`` -> ER Diagram generated from create_erd.py program
+```sparkifydb_erd.png``` -> ER Diagram generated from create_erd.py program
 
 ## Environment 
 Python 3.7 or above

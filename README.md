@@ -40,6 +40,11 @@ Sample Record :
 
 ## Schema
 
+### ER Diagram of sparkifydb
+
+![ER Diagram](sparkifydb_erd.png)
+
+
 #### Fact Table 
 **songplays** - records in log data associated with song plays i.e. records with page `NextSong`
 

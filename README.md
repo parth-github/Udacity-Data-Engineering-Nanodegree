@@ -66,7 +66,7 @@ start_time, hour, day, week, month, year, weekday
 ```
 
 ### ER Diagram
-![ER Diagram] (sparkifydb_erd.png)
+![ER Diagram](sparkifydb_erd.png)
 
 ## Project Files
 

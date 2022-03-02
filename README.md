@@ -77,6 +77,13 @@ start_time, hour, day, week, month, year, weekday
 
 ```test.ipynb``` -> a notebook to connect to postgres db and validate the data loaded.
 
+
+### Optional files
+
+```create_erd.py``` -> to create ER Diagram of sparkify db from postgresql db
+
+```sparkifydb_erd.png`` -> ER Diagram generated from create_erd.py program
+
 ## Environment 
 Python 3.7 or above
 

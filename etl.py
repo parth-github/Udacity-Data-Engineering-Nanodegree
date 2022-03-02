@@ -78,7 +78,7 @@ def process_log_file(cur, filepath):
 
         # insert songplay record
         #if songid is not None or artistid is not None:
-        songplay_data = (index, row.ts, row.userId, row.level, songid, artistid, row.sessionId,\
+        songplay_data = (row.ts, row.userId, row.level, songid, artistid, row.sessionId,\
                          row.location, row.userAgent)
         cur.execute(songplay_table_insert, songplay_data)
         #else: print(f"Null value songid: {songid}, artistid: {artistid} can't be inserted")

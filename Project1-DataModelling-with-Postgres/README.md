@@ -124,3 +124,5 @@ python etl.py
 [Python Docstring](https://www.datacamp.com/community/tutorials/docstrings-python)
 
 [Faster Way to Load Data into PostgreSQL using Python](https://hakibenita.com/fast-load-data-python-postgresql)
+
+[Pandas to PostgreSQL using Psycopg2: Bulk Insert Performance Benchmark](https://naysan.ca/2020/05/09/pandas-to-postgresql-using-psycopg2-bulk-insert-performance-benchmark/)

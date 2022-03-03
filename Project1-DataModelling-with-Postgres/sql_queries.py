@@ -69,7 +69,7 @@ create table if not exists time (
 # not require to separately add songplay_id, since you are using type SERIAL i.e. an auto increment type for songplay_id. This basically, add a new row with updated index value for songplay_id column.
 songplay_table_insert = ("""
 INSERT INTO songplays (start_time, user_id, level, song_id, artist_id, session_id, location, user_agent)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
 ON CONFLICT(songplay_id) DO NOTHING;
 """)
 

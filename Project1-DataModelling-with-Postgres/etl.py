@@ -6,7 +6,7 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
-     """
+    """
     This procedure processes a song file whose filepath has been provided as an arugment.
     It extracts the song information in order to store it into the songs table.
     Then it extracts the artist information in order to store it into the artists table.
@@ -28,7 +28,7 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
-     """
+    """
     This procedure processes a log file whose filepath has been provided as an arugment.
     It extracts and filter data where 'page' field having value 'NextSong' into pandas dataframe.
     It extract time in hour/day etc. from  'ts' field and insert into the time table.

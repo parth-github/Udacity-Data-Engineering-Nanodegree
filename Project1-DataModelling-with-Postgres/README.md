@@ -70,8 +70,6 @@ artist_id, name, location, latitude, longitude
 start_time, hour, day, week, month, year, weekday
 ```
 
-### ER Diagram
-![ER Diagram](sparkifydb_erd.png)
 
 ## Project Files
 
@@ -120,3 +118,9 @@ python etl.py
 [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 
 [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+
+[PEP8 Documentation](https://www.python.org/dev/peps/pep-0008/)
+
+[Python Docstring](https://www.datacamp.com/community/tutorials/docstrings-python)
+
+[Faster Way to Load Data into PostgreSQL using Python](https://hakibenita.com/fast-load-data-python-postgresql)

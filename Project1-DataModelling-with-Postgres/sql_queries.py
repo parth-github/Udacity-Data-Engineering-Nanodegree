@@ -66,13 +66,17 @@ create table if not exists time (
 """)
 
 # INSERT RECORDS
-
+# not require to separately add songplay_id, since you are using type SERIAL i.e. an auto increment type for songplay_id. This basically, add a new row with updated index value for songplay_id column.
 songplay_table_insert = ("""
 INSERT INTO songplays (start_time, user_id, level, song_id, artist_id, session_id, location, user_agent)
 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
 ON CONFLICT(songplay_id) DO NOTHING;
 """)
 
+'''
+For the user table insert query, the conflict resolution is a little different. A user will be present even if he/she is a free tier user. But what if the free tier user converts into a paid user. In that case we have to modify the level of the user as below:
+ON CONFLICT(user_id) DO UPDATE SET level = excluded.level
+'''
 user_table_insert = ("""
 INSERT INTO users ("user_id","first_name", "last_name", "gender", "level")
 VALUES (%s, %s, %s, %s, %s)

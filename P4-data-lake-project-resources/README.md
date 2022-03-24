@@ -1,4 +1,4 @@
-# Data Modeling with Postgres
+# Data Lake with Amazon S3, EMR, PySpark
 
 ## **Overview**
 A startup wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. 
@@ -116,3 +116,27 @@ python etl.py
 [PEP8 Documentation](https://www.python.org/dev/peps/pep-0008/)
 
 [Python Docstring](https://www.datacamp.com/community/tutorials/docstrings-python)
+
+
+For more advanced techniques and further reference - you might find this link useful: 
+
+https://stackoverflow.com/questions/45082832/how-to-read-partitioned-parquet-files-from-s3-using-pyarrow-in-python
+
+https://arrow.apache.org/docs/python/parquet.html
+
+To keep yourself up to date with the new S3 features - you can also include as in your favourite list: 
+
+https://www.simplilearn.com/tutorials/aws-tutorial/aws-s3
+
+Read Me files are so important for scalability and document purposes: This is a great tutorial that covers the majority of its aspects: 
+
+https://www.makeareadme.com/
+
+Udacity also offers a great free course in this: 
+
+https://www.udacity.com/course/writing-readmes--ud777
+
+If you are keen to understand more about this important style for the dev community, refer to this useful link: 
+
+https://www.python.org/dev/peps/pep-0008/
+

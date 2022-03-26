@@ -63,6 +63,27 @@ The final operator to create is the data quality operator, which is used to run 
 
 # How to run
 
-In the workspace, after completing the code,  start by using the command : ```/opt/airflow/start.sh```
+1. Launch Cloud Gateway
+
+2. Create an IAM User with following permissions:
+    * AdministratorAccess
+    * AmazonRedshiftFullAccess
+    * AmazonS3FullAccess
+
+3. In the workspace BASH, start airflow services by using the command : ```/opt/airflow/start.sh```
+
+4. Under workspace click `ACESS AIRFLOW` button to open the webpage to access airflow.
+
+5. Create *Connection* by clicking Admin -> Connection -> Create
+
+6. Provide Conn Id: `aws_credentials`
+
+    Conn Type: `Amazon Web Services`
+
+    Login: <Access key ID>
+
+    Password: <Secret access key>
+    
+    And Save the connection.
 
 Once  done, it would automatically start all the dags required and outputting the result to its respective tables

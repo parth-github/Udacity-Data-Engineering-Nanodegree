@@ -10,9 +10,9 @@ from helpers import SqlQueries
 # AWS_SECRET = os.environ.get('AWS_SECRET')
 
 default_args = {
-    'owner': 'nareshkumar',
-    'start_date': datetime(2018, 11, 1),
-    'end_date': datetime(2018, 11, 30),
+    'owner': 'Smriti',
+    'start_date': datetime(2022, 3, 25),
+    'end_date': datetime(2022, 3, 31),
     'depends_on_past': False,
     'retries': 3,
     'retry_delay': timedelta(minutes=5),

@@ -72,7 +72,7 @@ The final operator to create is the data quality operator, which is used to run 
 
 3. In the workspace BASH, start airflow services by using the command : ```/opt/airflow/start.sh```
 
-4. Under workspace click `ACESS AIRFLOW` button to open the webpage to access airflow.
+4. Under workspace click `ACCESS AIRFLOW` button to open the webpage to access airflow.
 
 5. Create *Connection* by clicking Admin -> Connection -> Create
 

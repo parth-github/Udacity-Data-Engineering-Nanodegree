@@ -83,7 +83,11 @@ The final operator to create is the data quality operator, which is used to run 
     Login: <Access key ID>
 
     Password: <Secret access key>
-    
+
     And Save the connection.
 
 Once  done, it would automatically start all the dags required and outputting the result to its respective tables
+
+# References
+
+https://review.udacity.com/#!/rubrics/2478/view

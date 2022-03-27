@@ -7,12 +7,13 @@ from airflow.operators import ( CreateTableOperator, StageToRedshiftOperator, Lo
 from helpers import SqlQueries
 from sparkify_dimension_subdag import load_dimension_subdag
 from airflow.operators.subdag_operator import SubDagOperator
+from airflow.hooks.S3_hook import S3Hook
 
 
 #AWS_KEY = os.environ.get('AWS_KEY')
 #AWS_SECRET = os.environ.get('AWS_SECRET')
 
-s3_bucket = 'udacity-dend-warehouse'
+s3_bucket_wh = 'udacity-dend-warehouse'
 song_s3_key = "song_data"
 log_s3_key = "log-data"
 log_json_file = "log_json_path.json"
@@ -45,6 +46,8 @@ create_tables_in_redshift = CreateTableOperator(
     dag = dag
 )
 
+
+'''
 stage_events_to_redshift = StageToRedshiftOperator(
     task_id='Stage_events',
     table_name="staging_events",
@@ -148,11 +151,11 @@ run_quality_checks = DataQualityOperator(
     tables = ["artists", "songplays", "songs", "time", "users"]
     
 )
-
+'''
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
 start_operator >> create_tables_in_redshift
-create_tables_in_redshift >> [stage_songs_to_redshift, stage_events_to_redshift] >> load_songplays_table
+#create_tables_in_redshift >> [stage_songs_to_redshift, stage_events_to_redshift] >> load_songplays_table
 
-load_songplays_table >> [load_user_dimension_table, load_song_dimension_table, load_artist_dimension_table, load_time_dimension_table] >> run_quality_checks >> end_operator
+#load_songplays_table >> [load_user_dimension_table, load_song_dimension_table, load_artist_dimension_table, load_time_dimension_table] >> run_quality_checks >> end_operator
 
